@@ -5,6 +5,11 @@
 #include "msi.h"
 
 
+char *supported_firmwares[SUPPORTED_FIRMWARES_NUM] = {
+    "E17F4IMS.108"
+};
+
+
 struct platform_device ec_device = {
     .name = "ec",
     .id_auto = true,
@@ -447,13 +452,20 @@ ssize_t show_backlight_led(struct device *dev, struct device_attribute *attr, ch
 
 
 static int __init init_mod(void){
-    platform_device_register(&ec_device);
+    for(int i = 0; i < SUPPORTED_FIRMWARES_NUM; i++){
+        if(!strcmp(dmi_get_system_info(DMI_BIOS_VERSION), supported_firmwares[i])){
+            platform_device_register(&ec_device);
 
-    for (int j = 0; j < ATTR_NUM; j++)
-        device_create_file(&ec_device.dev, &ec_attrs[j]);
+            for (int j = 0; j < ATTR_NUM; j++)
+                device_create_file(&ec_device.dev, &ec_attrs[j]);
 
-    printk("EC: module registered");
-    return 0;
+            printk("EC: module registered");
+            return 0;
+        }
+    }
+    
+    printk("EC: failed to load module. This device is not supported");
+    return 1;
 }
 
 
