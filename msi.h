@@ -2,6 +2,9 @@
 #include <linux/device.h>
 
 
+#define SUPPORTED_FIRMWARES_NUM 1
+
+
 #define ATTR_NUM 13
 #define FAN_SPEED_CONFIG_NUM 6
 #define FAN_RPM_BLOCK_NUM 2
