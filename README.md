@@ -21,3 +21,9 @@ Supported functionalities:
 
 To install this module via DKMS, run:
 `# make install`
+
+To compile the kernel object manually, run:
+`$ make module`
+
+To clean generated files, run:
+`$ make clean`
