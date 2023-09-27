@@ -2,7 +2,7 @@
 
 **This kernel module is designed to access the embedded controller via ACPI and expose it to the userspace.**
 
-**DMI matching is implemented to avoid loading on unsupported devices, but check supported devices below just in case.**
+**DMI matching is implemented to avoid loading on unsupported devices, but check supported firmwares below just in case.**
 
 Supported firmware(s):
  - 17F4EMS1
