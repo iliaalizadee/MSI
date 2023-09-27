@@ -1,7 +1,7 @@
 # MSI hardware management module for Linux
 
-## This kernel module is designed to access the embedded controller via ACPI and expose it to userspace.
-## There's no DMI protection yet so **DO NOT** try this module on unsupported devices.
+**This kernel module is designed to access the embedded controller via ACPI and expose it to userspace.**
+**There's no DMI protection yet so **DO NOT** try this module on unsupported devices.**
 
 Supported firmware(s):
  - 17F4EMS1
@@ -19,3 +19,4 @@ Supported functionalities:
 
 
 To install this module via DKMS, run:
+`# make install`
