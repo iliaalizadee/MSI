@@ -20,4 +20,5 @@ Supported functionalities:
 
 
 To install this module via DKMS, run:
+
 `# make install`
