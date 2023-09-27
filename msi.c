@@ -465,7 +465,7 @@ static int __init init_mod(void){
     }
     
     printk("EC: failed to load module. This device is not supported");
-    return 1;
+    return -EINVAL;
 }
 
 
