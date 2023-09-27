@@ -22,6 +22,9 @@ Supported functionalities:
 To install this module via DKMS, run:
 `# make install`
 
+To uninstall this module from DKMS build tree, run:
+`# make uninstall`
+
 To compile the kernel object manually, run:
 `$ make module`
 
