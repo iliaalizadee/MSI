@@ -1,6 +1,6 @@
 # MSI hardware management module for Linux
 
-**This kernel module is designed to access the embedded controller via ACPI and expose it to userspace.**
+**This kernel module is designed to access the embedded controller via ACPI and expose it to the userspace.**
 
 **There's no DMI protection yet so DO NOT try this module on unsupported devices.**
 
